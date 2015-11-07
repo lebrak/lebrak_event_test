@@ -1,1 +1,81 @@
-salut les coupains
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html lang="fr" ng-app="bemyapp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gestion évènementielle</title>
+  
+  <link rel="stylesheet" href="assets/dist/css/beMyApp.min.css">
+  
+
+</head>
+<body ng-controller="MainController">
+
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                        <span class="sr-only">afficher la navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand visible-xs" href="#">BeMyApp</a>
+                </div>
+                <nav class="hidden-xs">
+                    <ul class="nav navbar-nav">
+                        <a href="#/index" role="button" class="navbar-brand">
+                            BeMyApp
+                        </a>
+                        <li>
+                            <a ng-class="{'active' : location.path().match('/evenement')}"href="#/evenement">Liste des évènements</a>
+                        </li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li>
+                        <a ng-class="{'active' : location.path() == '/contact'}"href="#/contact">Contact</a>
+                      </li>
+                    </ul>
+                </nav>
+                <nav class="visible-xs in" collapse="!isCollapsed" style="height: auto;" ng-if="isCollapsed">
+                    <ul class="nav navbar-nav">
+                        <li class="pointer">
+                            <a ng-click="locate('evenement')">Liste des évènements</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li>
+                        <a ng-click="locate('contact')">Contact</a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" style="padding-top:70px; border: 1px solid #fff; border-top:0px;">
+        <section class="page-app" ng-view autoscroll="true" ng-cloak style="padding-bottom:40px"></section> 
+    </div>
+    <footer>
+    </footer>
+
+    <script src="assets/dist/js/beMyApp.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.route.js"></script>
+
+
+  <!-- Js file -->
+  <script src="components/default/defaultController.js"></script>
+  <script src="components/evenement/evenementController.js"></script>
+  
+  <!-- shared file -->
+  <!-- <script src="shared/route/routeService.js"></script>
+  <script src="shared/api/apiService.js"></script>
+  <script src="shared/user/userService.js"></script>
+  <script src="shared/localstorage/localstorageService.js"></script>
+  <script src="shared/sideMenu/sideMenuDirective.js"></script>
+  <script src="js/selecter.js"></script> -->
+</body>
+</html>

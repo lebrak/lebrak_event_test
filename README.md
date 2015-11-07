@@ -11,4 +11,6 @@ Gestion évènementielle
 lancez la commande suivante depuis la racine du projet : 
 
 - npm start
+- gulp
+
 
