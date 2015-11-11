@@ -14,7 +14,7 @@ gulp.task('scripts', function() {
       'node_modules/angular-route/angular-route.js',
       'node_modules/moment/moment.js',
       'node_modules/angular-moment/angular-moment.js',
-      'node_modules/angular-moment/node_modules/moment/locale/fr.js',
+      'node_modules/moment/locale/fr.js',
 
       //libs
       'node_modules/angular-bootstrap/ui-bootstrap.js',
