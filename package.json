@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "npm i; node server.js"
+    "start": "bower install;npm i; node server.js"
   },
   "dependencies": {
     "angular": "^1.4.7",
