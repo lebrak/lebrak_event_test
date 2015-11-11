@@ -10,7 +10,10 @@ Gestion évènementielle
 
 lancez la commande suivante depuis la racine du projet : 
 
-- npm start
-- gulp
+```
+npm start
+```
+
+L'application est prête.
 
 
