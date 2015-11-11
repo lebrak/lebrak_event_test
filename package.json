@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "bower install;npm i; node server.js"
+    "start": "echo 'Installation des packages nécessaires';bower install;npm i; echo 'Initialisation des ressources'; gulp; echo 'Lancement du serveur node'; node server.js"
   },
   "dependencies": {
     "angular": "^1.4.7",
