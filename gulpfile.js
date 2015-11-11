@@ -12,6 +12,9 @@ gulp.task('scripts', function() {
       // angular libs
       'node_modules/angular/angular.js',
       'node_modules/angular-route/angular-route.js',
+      'node_modules/moment/moment.js',
+      'node_modules/angular-moment/angular-moment.js',
+      'node_modules/angular-moment/node_modules/moment/locale/fr.js',
 
       //libs
       'node_modules/angular-bootstrap/ui-bootstrap.js',
@@ -19,7 +22,9 @@ gulp.task('scripts', function() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/angular-local-storage/dist/angular-local-storage.js',
       'node_modules/underscore/underscore.js',
-      // 'bower_components/angular-underscore-module/angular-underscore-module.js',
+      'bower_components/angular-underscore-module/angular-underscore-module.js',
+      'bower_components/angular-file-model/angular-file-model.js',
+      'bower_components/angular-ui-bootstrap-datetimepicker/datetimepicker.js',
 
     ])
     .pipe(concat('beMyApp.js'))
