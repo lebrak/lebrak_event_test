@@ -23,8 +23,9 @@ gulp.task('scripts', function() {
       'node_modules/angular-local-storage/dist/angular-local-storage.js',
       'node_modules/underscore/underscore.js',
       'bower_components/angular-underscore-module/angular-underscore-module.js',
-      'bower_components/angular-file-model/angular-file-model.js',
       'bower_components/angular-ui-bootstrap-datetimepicker/datetimepicker.js',
+      'bower_components/ng-file-upload/ng-file-upload-shim.js',
+      'bower_components/ng-file-upload/ng-file-upload.js',
 
     ])
     .pipe(concat('beMyApp.js'))

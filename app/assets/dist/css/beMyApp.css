@@ -7073,3 +7073,6 @@ fieldset[disabled] .btn-danger.active {
 .list-event .body .img {
   float: left;
   margin-right: 20px; }
+
+.list-event .body .search {
+  margin-bottom: 20px; }

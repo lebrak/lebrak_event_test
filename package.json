@@ -1,6 +1,6 @@
 {
   "name": "beMyApp-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "echo 'Installation des packages nécessaires';bower install;npm i; echo 'Initialisation des ressources'; gulp; echo 'Lancement du serveur node'; node server.js"
@@ -13,6 +13,7 @@
     "body-parser": "^1.14.1",
     "connect-busboy": "0.0.2",
     "express": "^4.13.3",
+    "formidable": "^1.0.17",
     "fs-extra": "^0.26.2",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

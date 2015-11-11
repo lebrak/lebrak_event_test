@@ -7,8 +7,6 @@ angular.module('bemyapp')
     var lastToken = [];
 
     function success(res){
-        console.log('success',res);
-        
         if(res.data)
             return res.data;
         else
@@ -58,50 +56,15 @@ angular.module('bemyapp')
         get: function(path, cb, errcb) {
             httpGet(path).then(
                 function(res) {
-                    console.log('apiRes',res);
                     if (cb) cb(res);
                 },
                 function(err) {
-                    console.log('apiError',err);
                     if (errcb) errcb(err);
                     else {
                       console.log('ERREUR TYPE GENERALE:'+err);
                     }
                 }
             );
-        },
-        upload: function(path, data, cb, errcb) {
-        $http.post(path, data, {
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        })
-        .success(function(res){
-            console.log('res',res);
-        })
-        .error(function(){
-        });
-
-            //  var fd = new FormData();
-            //  console.log('data',data);
-            // fd.append('file', data.logo);
-            // data.file = fd;
-            // console.log('fd',fd);
-            // var param = {
-            //     transformRequest: angular.identity,
-            //     headers: {'Content-Type': undefined}
-            // };
-
-            // httpPost(path, data, param).then(
-            //     function(res) {
-            //         if (cb) cb(res);
-            //     },
-            //     function(err) {
-            //         if (errcb) errcb(err);
-            //         else {
-            //           console.log('ERREUR TYPE GENERALE:'+err);
-            //         }
-            //     }
-            // );
         },
     };
 });

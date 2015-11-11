@@ -4,6 +4,7 @@ var http = require('http')
  	app = express(),
  	path = require('path'),
  	mongoose = require('mongoose'),
+ 	multer  = require('multer'),
 	bodyParser = require('body-parser');
 
 // set env port or 3000 if no env port
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // set the default directory of the public app
 app.use(express.static(path.join(__dirname, 'app')));
+
 
 
 require(__dirname + '/server/modules/mongoose')(mongoose);

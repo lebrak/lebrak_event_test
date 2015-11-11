@@ -4,10 +4,10 @@
 angular.module('bemyapp', [
   'ngRoute',
   'ui.bootstrap',
-  'file-model',
   'ui.bootstrap.datetimepicker',
   'angularMoment',
   'underscore',
+  'ngFileUpload',
   // 'mgcrea.ngStrap'
 ])
 .run(function($rootScope, $location, amMoment) {

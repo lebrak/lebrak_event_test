@@ -7,13 +7,11 @@ angular.module('bemyapp')
         getEventList: function(cb, cbErr) {    
             Api.get(path + '/evenement/list', cb, cbErr);
         },
-        addEvent: function(data, cb, cbErr) { 
-            // if(data.logo) {
-            //     Api.upload(path + '/evenement/add', data, cb, cbErr);
-            // } else {
-                Api.post(path + '/evenement/add', data, cb, cbErr);
-            // }
-            
+        searchEvent: function(data, cb, cbErr) {    
+            Api.post(path + '/evenement/search', data, cb, cbErr);
+        },
+        addEvent: function(data, cb, cbErr) {
+            Api.post(path + '/evenement/add', data, cb, cbErr);
         },
         updateEvent: function(data, cb, cbErr) {    
             Api.post(path + 'evenement/update', data, cb, cbErr);
