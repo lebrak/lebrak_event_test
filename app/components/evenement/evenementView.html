@@ -14,7 +14,9 @@
 		<accordion close-others="oneAtATime">	
 			<accordion-group ng-repeat="(key, item) in evt">
 				<accordion-heading>
-                   {{item.titre}} - <span>{{item.date | amDateFormat:'DD/MM/YYYY à HH:mm:ss'}}</span>
+					<div class="head">
+                   		<img src="{{item.logo || 'assets/img/default.png'}}" alt="mon image" width="40px" /> {{item.titre}} - <span>{{item.date | amDateFormat:'DD/MM/YYYY à HH:mm:ss'}}</span>
+               		</div>
                 </accordion-heading>
                 <span class="pull-right"> <i class="glyphicon glyphicon-edit pointer" ng-click="update(item)"></i> </span>
 				<div class="img"> <img src="{{item.logo || 'assets/img/default.png'}}" alt="mon image" width="100px" /></div>

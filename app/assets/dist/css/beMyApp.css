@@ -7076,3 +7076,9 @@ fieldset[disabled] .btn-danger.active {
 
 .list-event .body .search {
   margin-bottom: 20px; }
+
+.list-event .body .head {
+  width: 100%; }
+
+.list-event .body .panel-title a:hover, .list-event .body .panel-title a:focus, .list-event .body .panel-title a:visited {
+  text-decoration: none !important; }
