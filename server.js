@@ -4,7 +4,6 @@ var http = require('http')
  	app = express(),
  	path = require('path'),
  	mongoose = require('mongoose'),
- 	multer  = require('multer'),
 	bodyParser = require('body-parser');
 
 // set env port or 3000 if no env port
