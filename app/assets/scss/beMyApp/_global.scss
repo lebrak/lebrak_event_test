@@ -1,0 +1,13 @@
+// put the global style here
+
+.navbar {
+	.nav>li>a {
+		&.active {
+			color: white;
+		}
+	}
+}
+
+.pointer {
+	cursor: pointer;
+}

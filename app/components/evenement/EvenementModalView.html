@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <h3 class="modal-title">Nouvel évènement</h3>
+</div>
+<div class="modal-body">
+	<form name="addEventForm" class="form-column">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{{evt.logo || 'assets/img/default.png'}}" width="100px" />
+			</div>
+			<div class="col-md-8">
+				<button type="file" class="btn btn-primary" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-size="3MB">
+      				Choisissez un logo
+  				</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="titre">Titre</label>  
+				<div class="col-md-8">
+					<input id="titre" ng-class="{ 'has-error' : addEventForm.titre.$invalid && submitted}" name="titre" ng-model="evt.titre" type="text" placeholder="Titre de l'évènement" class="form-control input-md" required>
+					
+					<div class="has-error error" ng-show="submitted && addEventForm.titre.$error.required">Ce champs ne peut pas être vide</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="description">Description</label>  
+				<div class="col-md-8">
+					<textarea id="description" class="form-control" rows="5" name="description" ng-model="evt.description"></textarea>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="type">Type</label>
+				<div class="col-md-8">
+					<select id="type" name="type" ng-model="evt.type" class="form-control" required>
+						<option value="1">conférences</option>
+						<option value="2">meetups</option>
+						<option value="3">workshops</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="date">Date</label>  
+				<div class="col-md-8">
+					<!-- <input id="date" name="date" ng-model="evt.date" type="dateTime" placeholder="Date de l'évènement" class="form-control input-md" required> -->
+					<datetimepicker  show-weeks="true" hour-step="1" minute-step="15" ng-model="evt.date" show-meridian="false" date-format="dd/MM/yyyy" readonly-time="false"></datetimepicker>
+				</div>
+			</div>
+		</div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok(addEventForm)">{{save || "Enregistrer"}}</button>
+    <button class="btn btn-warning" ng-click="cancel()">Annuler</button>
+</div>

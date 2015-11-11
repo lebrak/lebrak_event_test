@@ -1,1 +1,19 @@
-# lebrak_event_test
+Gestion évènementielle
+--
+
+### Pré-requis
+
+- mongodb (brew install mongodb on mac osx)
+- node.js
+
+### Installation
+
+lancez la commande suivante depuis la racine du projet : 
+
+```
+npm start
+```
+
+L'application est prête.
+
+

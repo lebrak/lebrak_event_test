@@ -1,0 +1,27 @@
+<div class="list-event">
+	<h1>Liste des évènements !!</h1>
+	<div class="header">
+		<button class="btn btn-primary" ng-click="openModal()">Ajouter un évènement</button>
+	</div>
+
+	<div class="body">
+		<div class="form-group has-feedback">
+    		<label for="search" class="sr-only">Rechercher</label>
+    		<input type="text" class="form-control" name="search" id="search" placeholder="Rechercher" ng-model="str" ng-keyup="search()">
+      		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+    	</div>
+
+		<accordion close-others="oneAtATime">	
+			<accordion-group ng-repeat="(key, item) in evt">
+				<accordion-heading>
+                   {{item.titre}} - <span>{{item.date | amDateFormat:'DD/MM/YYYY à HH:mm:ss'}}</span>
+                </accordion-heading>
+                <span class="pull-right"> <i class="glyphicon glyphicon-edit pointer" ng-click="update(item)"></i> </span>
+				<div class="img"> <img src="{{item.logo || 'assets/img/default.png'}}" alt="mon image" width="100px" /></div>
+				<div class="info"> {{item.type | bemyappType}} <span am-time-ago="item.date"></span> </div>
+				<div class="content"> {{item.description}}</div>
+			</accordion-group>
+
+		</accordion>
+	</div>
+</div>
