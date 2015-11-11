@@ -13,5 +13,15 @@
 		.search {
 			margin-bottom: 20px;
 		}
+
+		.head {
+			width: 100%;
+		}
+
+		.panel-title{
+			a:hover, a:focus, a:visited {
+				text-decoration: none !important;
+			}	
+		}
 	}
 }
