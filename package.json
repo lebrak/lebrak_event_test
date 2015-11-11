@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "start": "echo 'Installation des packages nécessaires';bower install;npm i; echo 'Initialisation des ressources'; gulp; echo 'Lancement du serveur node'; node server.js"
+    "start": "echo 'Installation des packages nécessaires';npm i; bower install; echo 'Initialisation des ressources'; gulp; echo 'Lancement du serveur node'; node server.js"
   },
   "dependencies": {
     "angular": "^1.4.7",
@@ -11,6 +11,7 @@
     "angular-moment": "^0.10.3",
     "angular-route": "^1.4.7",
     "body-parser": "^1.14.1",
+    "bower": "^1.6.5",
     "connect-busboy": "0.0.2",
     "express": "^4.13.3",
     "formidable": "^1.0.17",

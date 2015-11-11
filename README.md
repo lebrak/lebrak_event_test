@@ -26,9 +26,9 @@ Lancez les commandes suivantes :
 
 Pour l'installation des components : 
 ```
-bower install;
-
 npm install;
+
+bower install;
 
 ```
 
