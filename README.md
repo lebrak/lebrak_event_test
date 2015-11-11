@@ -22,7 +22,7 @@ L'application est prête ! Rdv à l'adresse suivante pour la tester : http://loc
 
 ### Installation manuelle
 
-Lancez les commandes
+Lancez les commandes suivantes :
 
 Pour l'installation des components : 
 ```
